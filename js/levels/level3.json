@@ -1,0 +1,23 @@
+{
+  "id": 3,
+  "name": "Heart's Choice Garden",
+  "description": "Choose your path wisely - you only need 4 out of 6 hearts",
+  "heartsRequired": 4,
+  "bunnyStart": { "x": 50, "y": 300 },
+  "snakeStart": { "x": 100, "y": 350 },
+  "hearts": [
+    { "x": 200, "y": 100 },
+    { "x": 400, "y": 100 },
+    { "x": 600, "y": 100 },
+    { "x": 200, "y": 400 },
+    { "x": 400, "y": 400 },
+    { "x": 700, "y": 300 }
+  ],
+  "water": [
+    { "x": 150, "y": 150, "width": 80, "height": 300 },
+    { "x": 270, "y": 200, "width": 200, "height": 80 },
+    { "x": 350, "y": 150, "width": 80, "height": 200 },
+    { "x": 500, "y": 200, "width": 120, "height": 200 },
+    { "x": 650, "y": 150, "width": 80, "height": 300 }
+  ]
+} 

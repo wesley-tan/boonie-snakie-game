@@ -1,0 +1,18 @@
+{
+  "id": 1,
+  "name": "Garden Entrance",
+  "description": "Learn the basics of cooperation",
+  "heartsRequired": 3,
+  "bunnyStart": { "x": 100, "y": 300 },
+  "snakeStart": { "x": 150, "y": 350 },
+  "hearts": [
+    { "x": 300, "y": 200 },
+    { "x": 500, "y": 300 },
+    { "x": 700, "y": 250 }
+  ],
+  "water": [
+    { "x": 250, "y": 300, "width": 100, "height": 100 },
+    { "x": 450, "y": 200, "width": 100, "height": 150 },
+    { "x": 650, "y": 300, "width": 100, "height": 100 }
+  ]
+} 
