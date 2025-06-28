@@ -1,5 +1,5 @@
 /**
- * Love Garden Adventure - Main Game File
+ * Boonie Snakie Carrot Adventure - Main Game File
  * Enhanced cooperative puzzle-platformer with strategic snake mechanics
  */
 
@@ -62,7 +62,7 @@ async function initializeGame() {
         gameRunning = true;
         requestAnimationFrame(gameLoop);
         
-        console.log('🐰🐍 Love Garden Adventure initialized successfully!');
+        console.log('🐰🐍 Boonie Snakie Carrot Adventure initialized successfully!');
     } catch (error) {
         console.error('Failed to initialize game:', error);
         showError('Game failed to start. Please refresh the page.');
@@ -558,7 +558,7 @@ function showError(message) {
  * Window load event - Start the game when everything is ready
  */
 window.addEventListener('load', () => {
-    console.log('🎮 Starting Love Garden Adventure...');
+    console.log('🎮 Starting Boonie Snakie Carrot Adventure...');
     initializeGame();
 });
 

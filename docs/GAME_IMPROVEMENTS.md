@@ -1,4 +1,4 @@
-# 🎮 Love Garden Adventure - Game Improvement Recommendations
+# 🎮 Boonie Snakie Carrot Adventure - Game Improvement Recommendations
 
 ## 🚀 **IMMEDIATE IMPROVEMENTS (High Priority)**
 

@@ -1,7 +1,7 @@
-# 🐰🐍 Love Garden Adventure - Implementation Document
+# 🐰🐍 Boonie Snakie Carrot Adventure - Implementation Document
 
 ## 📋 Project Overview
-**Game**: Love Garden Adventure - Cooperative Puzzle Platformer  
+**Game**: Boonie Snakie Carrot Adventure - Cooperative Puzzle Platformer  
 **Perspective**: Top-down 2D  
 **Technology**: HTML5 Canvas + JavaScript ES6  
 **Players**: 2 (Local Co-op)  

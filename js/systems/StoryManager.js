@@ -10,7 +10,7 @@ class StoryManager {
         
         this.storyPages = [
             {
-                title: "🌸 Love Garden Adventure 🌸",
+                title: "🌸 Boonie Snakie Carrot Adventure 🌸",
                 text: "In a magical garden where love blooms eternal...",
                 image: "garden",
                 duration: 3000

@@ -8,7 +8,7 @@ class TutorialManager {
         this.tutorialSteps = [
             {
                 id: 'welcome',
-                title: 'Welcome to Love Garden Adventure! 💕',
+                title: 'Welcome to Boonie Snakie Carrot Adventure! 💕',
                 message: 'Meet Boonie the bunny! Use ARROW KEYS to help her move around.',
                 highlight: 'bunny',
                 duration: 5000

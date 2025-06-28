@@ -1,4 +1,4 @@
-# 🐰 Love Garden Adventure 🐍
+# 🐰 Boonie Snakie Carrot Adventure 🐍
 
 A delightful cooperative puzzle-platformer where Boonie the bunny and Snakie the snake work together to collect heart-shaped carrots! Features an engaging story, interactive tutorial, and strategic gameplay.
 
@@ -63,7 +63,7 @@ A delightful cooperative puzzle-platformer where Boonie the bunny and Snakie the
 ```bash
 # Push your code to GitHub
 git add .
-git commit -m "Add Love Garden Adventure"
+git commit -m "Add Boonie Snakie Carrot Adventure"
 git push origin main
 
 # Enable GitHub Pages in repository settings
@@ -239,7 +239,7 @@ window.testGameFixes?.runAllTests();
 MIT License - Feel free to modify, distribute, and use for any purpose!
 
 ### **Credits**
-- **Game Design**: Love Garden Adventure Team
+- **Game Design**: Boonie Snakie Carrot Adventure Team
 - **Characters**: Boonie the Bunny 🐰 & Snakie the Snake 🐍
 - **Technology**: HTML5 Canvas, Vanilla JavaScript
 - **Inspiration**: Cooperative puzzle games and friendship! 💕
