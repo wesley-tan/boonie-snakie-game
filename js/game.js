@@ -316,11 +316,14 @@ function render() {
 function setupCanvasDimensions() {
     try {
         const container = canvas.parentElement;
-        const maxWidth = Math.min(800, window.innerWidth - 60);
-        const maxHeight = Math.min(600, window.innerHeight - 200);
+        const containerRect = container.getBoundingClientRect();
         
-        // Maintain aspect ratio
-        const aspectRatio = 800 / 600;
+        // Calculate available space more accurately
+        const maxWidth = Math.min(800, window.innerWidth - 80, containerRect.width - 40);
+        const maxHeight = Math.min(600, window.innerHeight - 300);
+        
+        // Maintain aspect ratio (4:3)
+        const aspectRatio = 4 / 3;
         let canvasWidth = maxWidth;
         let canvasHeight = maxWidth / aspectRatio;
         
@@ -329,21 +332,32 @@ function setupCanvasDimensions() {
             canvasWidth = maxHeight * aspectRatio;
         }
         
-        // Set canvas dimensions
-        canvas.width = Math.max(canvasWidth, 400); // Minimum width
-        canvas.height = Math.max(canvasHeight, 300); // Minimum height
+        // Ensure minimum playable size
+        canvasWidth = Math.max(canvasWidth, 400);
+        canvasHeight = Math.max(canvasHeight, 300);
         
-        // Update CSS for proper display
+        // Set internal canvas dimensions (affects coordinate system)
+        canvas.width = Math.round(canvasWidth);
+        canvas.height = Math.round(canvasHeight);
+        
+        // Set display dimensions to match (prevents scaling artifacts)
         canvas.style.width = canvas.width + 'px';
         canvas.style.height = canvas.height + 'px';
         
-        console.log(`Canvas set to ${canvas.width}x${canvas.height}`);
+        // Update terrain manager with new dimensions
+        if (terrainManager) {
+            terrainManager.setCanvasDimensions(canvas.width, canvas.height);
+        }
+        
+        console.log(`📏 Canvas dimensions: ${canvas.width}x${canvas.height} (display: ${canvas.style.width} x ${canvas.style.height})`);
         
     } catch (error) {
         console.warn('Error setting up canvas dimensions, using fallback:', error);
-        // Fallback to fixed dimensions
+        // Fallback to standard dimensions
         canvas.width = 800;
         canvas.height = 600;
+        canvas.style.width = '800px';
+        canvas.style.height = '600px';
     }
 }
 
@@ -351,7 +365,18 @@ function setupCanvasDimensions() {
  * Handle window resize
  */
 function handleResize() {
-    setupCanvasDimensions();
+    // Add small delay to handle rapid resize events
+    clearTimeout(window.resizeTimeout);
+    window.resizeTimeout = setTimeout(() => {
+        setupCanvasDimensions();
+        
+        // Update all systems that depend on canvas dimensions
+        if (terrainManager) {
+            terrainManager.setCanvasDimensions(canvas.width, canvas.height);
+        }
+        
+        console.log('🔄 Window resized, canvas updated');
+    }, 100);
 }
 
 /**

@@ -44,6 +44,8 @@ h1 {
     display: block;
     margin: 20px auto;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    height: auto;
 }
 
 .controls {
@@ -96,18 +98,46 @@ h1 {
     color: #c62828;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .game-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
     .controls {
         flex-direction: column;
+        gap: 10px;
     }
     
     .game-info {
         flex-direction: column;
         gap: 10px;
+        font-size: 1em;
     }
     
     #gameCanvas {
-        width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
+        margin: 10px auto;
+    }
+    
+    .control-section {
+        padding: 10px 15px;
+    }
+    
+    .control-section h3 {
+        font-size: 1.1em;
+    }
+    
+    .control-section p {
+        font-size: 0.85em;
     }
 } 
