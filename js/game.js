@@ -74,11 +74,20 @@ async function initializeGame() {
  */
 async function loadLevel(levelId) {
     try {
+        console.log(`🎮 Attempting to load level ${levelId}...`);
+        
         // Load level data
         const level = await levelManager.loadLevel(levelId);
         if (!level) {
             throw new Error(`Could not load level ${levelId}`);
         }
+        
+        console.log(`📊 Level ${levelId} data loaded:`, {
+            name: level.name,
+            heartsCount: level.hearts.length,
+            requiredHearts: level.requiredHearts,
+            waterObstacles: level.waterObstacles.length
+        });
         
         // Set up terrain with level data
         terrainManager.loadWaterObstacles(level.waterObstacles);
@@ -97,9 +106,9 @@ async function loadLevel(levelId) {
         // Initialize game state
         gameState.initialize(bunny, snake, level, systems, uiElements);
         
-        console.log(`Level ${levelId} loaded: ${level.name}`);
+        console.log(`✅ Level ${levelId} loaded successfully: ${level.name}`);
     } catch (error) {
-        console.error('Failed to load level:', error);
+        console.error('❌ Failed to load level:', error);
         showError(`Failed to load level ${levelId}`);
     }
 }
@@ -114,16 +123,20 @@ async function handleLevelChange(event) {
     }
     
     const newLevelId = event.detail.level;
+    console.log(`🔄 Level change requested: ${newLevelId}`);
     
     try {
-        if (levelManager.hasNextLevel()) {
+        // Check if the requested level exists
+        if (newLevelId <= levelManager.maxLevels) {
+            console.log(`✅ Loading level ${newLevelId}...`);
             await loadLevel(newLevelId);
-            } else {
-        // Game completed!
-        gameState.gamePhase = 'game_complete';
-        gameState.updateStatusMessage('🏆 CONGRATULATIONS! 🏆 You completed all levels! Press R to play again from Level 1! 💕', 'success');
-        console.log('🎉 Game completed! All levels finished!');
-    }
+        } else {
+            // Game completed!
+            console.log('🎉 All levels completed!');
+            gameState.gamePhase = 'game_complete';
+            gameState.updateStatusMessage('🏆 CONGRATULATIONS! 🏆 You completed all levels! Press R to play again from Level 1! 💕', 'success');
+            console.log('🎉 Game completed! All levels finished!');
+        }
     } catch (error) {
         console.error('Error during level change:', error);
         gameState.updateStatusMessage('❌ Error loading next level. Try resetting with R.', 'error');

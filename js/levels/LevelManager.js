@@ -32,6 +32,8 @@ class LevelManager {
     
     // Get level data (simulated JSON loading)
     getLevelData(levelId) {
+        console.log(`🔍 LevelManager: Requesting level ${levelId}`);
+        
         const levelDataMap = {
             1: {
                 id: 1,
@@ -136,7 +138,17 @@ class LevelManager {
             }
         };
         
-        return levelDataMap[levelId] || null;
+        const result = levelDataMap[levelId] || null;
+        console.log(`📁 LevelManager: Level ${levelId} data ${result ? 'found' : 'NOT FOUND'}`);
+        if (result) {
+            console.log(`📋 Level ${levelId} info:`, {
+                name: result.name,
+                hearts: result.hearts.length,
+                water: result.water.length
+            });
+        }
+        
+        return result;
     }
     
     // Create level object from JSON data

@@ -89,15 +89,20 @@ class GameState {
     
     // Progress to next level
     nextLevel() {
+        console.log(`📈 GameState: Progressing from level ${this.currentLevel} to ${this.currentLevel + 1}`);
         this.currentLevel++;
         this.gamePhase = 'playing';
         this.updateUI();
+        
+        console.log(`🚀 GameState: Dispatching levelChange event for level ${this.currentLevel}`);
         
         // Dispatch custom event for level change
         const event = new CustomEvent('levelChange', { 
             detail: { level: this.currentLevel }
         });
         document.dispatchEvent(event);
+        
+        console.log(`✅ GameState: Level change event dispatched for level ${this.currentLevel}`);
     }
     
     // Collect a heart (called by bunny)
