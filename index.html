@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐰 Love Garden Adventure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🐰 Love Garden Adventure 🐍</h1>
+        <div class="game-info">
+            <div class="score">Hearts Collected: <span id="score">0</span></div>
+            <div class="level">Level: <span id="level">1</span></div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div class="controls">
+            <div class="control-section">
+                <h3>🐰 Bunny Controls</h3>
+                <p>Arrow Keys: Move (can collect hearts)</p>
+            </div>
+            <div class="control-section">
+                <h3>🐍 Snake Controls</h3>
+                <p>Space: Toggle Bridge Mode</p>
+                <p>WASD: Move (only in bridge mode)</p>
+            </div>
+            <div class="control-section">
+                <h3>⚡ Game Controls</h3>
+                <p>P: Pause/Resume</p>
+                <p>R: Reset Level</p>
+            </div>
+        </div>
+        <div class="game-status" id="gameStatus"></div>
+    </div>
+    <!-- Utility classes -->
+    <script src="js/utils/Vector2D.js"></script>
+    
+    <!-- System classes -->
+    <script src="js/systems/Input.js"></script>
+    <script src="js/systems/Terrain.js"></script>
+    <script src="js/systems/Collision.js"></script>
+    <script src="js/systems/GameState.js"></script>
+    
+    <!-- Character classes -->
+    <script src="js/characters/Character.js"></script>
+    <script src="js/characters/Bunny.js"></script>
+    <script src="js/characters/Snake.js"></script>
+    <script src="js/characters/HeartCarrot.js"></script>
+    
+    <!-- Level management -->
+    <script src="js/levels/LevelManager.js"></script>
+    
+    <!-- Tutorial system -->
+    <script src="js/systems/TutorialManager.js"></script>
+    
+    <!-- Story system -->
+    <script src="js/systems/StoryManager.js"></script>
+    
+    <!-- Main game -->
+    <script src="js/game.js"></script>
+</body>
+</html> 

@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #a8e6cf 0%, #dcedc1 50%, #ffd3a5 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 900px;
+}
+
+h1 {
+    color: #2d5016;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #ff6b6b, #ffa726);
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#gameCanvas {
+    border: 4px solid #2d5016;
+    border-radius: 15px;
+    background: #87ceeb;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.control-section {
+    background: linear-gradient(45deg, #4caf50, #8bc34a);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    flex: 1;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.control-section h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+}
+
+.control-section p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.game-status {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 10px;
+    min-height: 20px;
+}
+
+.game-status.success {
+    background: #c8e6c9;
+    color: #2e7d32;
+}
+
+.game-status.info {
+    background: #bbdefb;
+    color: #1565c0;
+}
+
+.game-status.error {
+    background: #ffcdd2;
+    color: #c62828;
+}
+
+@media (max-width: 600px) {
+    .controls {
+        flex-direction: column;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+} 
