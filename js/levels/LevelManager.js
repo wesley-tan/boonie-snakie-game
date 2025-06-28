@@ -6,7 +6,7 @@ class LevelManager {
         this.levels = {};
         this.currentLevel = null;
         this.currentLevelId = 1;
-        this.maxLevels = 3; // We have 3 levels currently
+        this.maxLevels = 4; // We have 4 levels currently
     }
     
     // Load a level by ID
@@ -107,6 +107,31 @@ class LevelManager {
                     "🎯 Only 4 hearts needed out of 6!",
                     "🤔 Choose your path wisely",
                     "🐍 Snake management is crucial"
+                ]
+            },
+            4: {
+                id: 4,
+                name: "The Great Flood",
+                description: "Pure water challenge - Snakie must bridge everything!",
+                bunnyStart: [50, 250],
+                snakeStart: [100, 280],
+                water: [
+                    { x: 120, y: 0, width: 680, height: 600 },
+                    { x: 0, y: 0, width: 800, height: 120 },
+                    { x: 0, y: 480, width: 800, height: 120 }
+                ],
+                hearts: [
+                    { x: 200, y: 200 },
+                    { x: 400, y: 350 },
+                    { x: 600, y: 150 },
+                    { x: 750, y: 300 }
+                ],
+                requiredHearts: 3,
+                tips: [
+                    "🌊 Everything is flooded!",
+                    "🐍 Snake must bridge ALL movements",
+                    "💡 Plan your 8-segment snake path carefully!",
+                    "🎯 Only 3 hearts needed out of 4"
                 ]
             }
         };

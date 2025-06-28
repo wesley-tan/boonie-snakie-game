@@ -1,0 +1,19 @@
+{
+  "id": 4,
+  "name": "The Great Flood",
+  "description": "Pure water challenge - Snakie must bridge everything!",
+  "heartsRequired": 3,
+  "bunnyStart": { "x": 50, "y": 250 },
+  "snakeStart": { "x": 100, "y": 280 },
+  "hearts": [
+    { "x": 200, "y": 200 },
+    { "x": 400, "y": 350 },
+    { "x": 600, "y": 150 },
+    { "x": 750, "y": 300 }
+  ],
+  "water": [
+    { "x": 120, "y": 0, "width": 680, "height": 600 },
+    { "x": 0, "y": 0, "width": 800, "height": 120 },
+    { "x": 0, "y": 480, "width": 800, "height": 120 }
+  ]
+} 

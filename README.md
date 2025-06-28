@@ -136,12 +136,14 @@ Help Boonie the bunny collect heart-shaped carrots with assistance from Snakie t
 3. **🎮 Level 1**: Basic Cooperation (2/2 hearts required)
 4. **🎮 Level 2**: Strategic Thinking (3/4 hearts required)  
 5. **🎮 Level 3**: Master Challenge (4/6 hearts required - strategic choice!)
-6. **🏆 Game Complete** - Celebration + restart option
+6. **🎮 Level 4**: The Great Flood (3/4 hearts required - pure water challenge!)
+7. **🏆 Game Complete** - Celebration + restart option
 
 ### **Strategy Tips**
 - 🧠 Plan Snakie's path carefully - only 8 segments available!
 - 🤝 Coordinate both characters for efficient heart collection
-- 💡 Not all hearts are required in Level 3 - choose your battles!
+- 💡 Not all hearts are required in Level 3 & 4 - choose your battles!
+- 🌊 Level 4 is pure water - ultimate cooperation challenge!
 - 🔄 Use `R` to reset if you get stuck
 
 ---
@@ -220,7 +222,7 @@ window.testGameFixes?.runAllTests();
 - [ ] Test game locally on `localhost:8000`
 - [ ] Verify all controls work
 - [ ] Test story → tutorial → gameplay flow
-- [ ] Check all 3 levels complete properly
+- [ ] Check all 4 levels complete properly
 - [ ] Test restart functionality
 - [ ] Verify responsive design on different screen sizes
 
